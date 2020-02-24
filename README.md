@@ -6,4 +6,4 @@ It is very common for developers to be confused when it comes to classes, namesp
 
 With that in mind, this package was built to share a line of thought and help better organize your projects in Laravel.
 
-Initially only written tips will be made. Subsequently, the package will also validate your project.
+Initially only the written tips will be made and, later, the package will also validate your project.
