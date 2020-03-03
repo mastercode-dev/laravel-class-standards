@@ -24,4 +24,4 @@ In this case the namespace is `App\Models`.
 
 There is no right or wrong in this case. It is up to the developer to organize as they prefer. It is only recommended to follow the same pattern for everyone.
 
-To name the file, always use singular words. Ever!
+To name the file, always use singular words. Ever! Examples: `Product`, `Category`, `CategoryProduct` and so on.
