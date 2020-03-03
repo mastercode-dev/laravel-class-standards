@@ -1,5 +1,10 @@
 # Laravel Class Standards
 
+## Summary
+
+ - [Introduction](#Introduction)
+ - [Models](#Models)
+
 ## Introduction
 
 It is very common for developers to be confused when it comes to classes, namespaces, methods and even variables.
