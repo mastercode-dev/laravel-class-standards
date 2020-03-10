@@ -4,6 +4,7 @@
 
  - [Introduction](#Introduction)
  - [Models](#Models)
+ - [Controllers](#Controllers)
 
 ## Introduction
 
@@ -25,3 +26,28 @@ In this case the namespace is `App\Models`.
 There is no right or wrong in this case. It is up to the developer to organize as they prefer. It is only recommended to follow the same pattern for everyone.
 
 To name the file, always use singular words. Ever! Examples: `Product`, `Category`, `CategoryProduct` and so on.
+
+## Controllers
+
+**Namespace**
+
+It is important to specify the _namespace_, when the system has different interfaces, with different functions, mainly.
+
+Let's use the example of an e-commerce:
+1. In the manager, it is possible to create, edit and remove products;
+2. On the website, the customer can only list the products and view them;
+
+In this case, the ideal is to create two _controllers_ with the same name, but in different _namespaces_: `.../Controllers/Manager/ProductsController` and `.../Controllers/Client/ProductsController`.
+
+To add the _namespace_ to the _controller_ creation command: `php artisan make: controller Namespace/NameController`.
+
+**Class**
+
+In the _Laravel_ documentation, the examples of _controllers_ are always in the singular.
+
+Our recommendation is that they be created in the plural, just to follow the pattern of the _routes_.
+Anyway this will depend on the preference of the developer or the team.
+
+The biggest issue here is that a _controller_ (almost) always references a _model_, whether singular or plural. So, if you have a `Product` _model_ create a `ProductController` or `ProductsController` to manipulate that _model_.
+
+Of course there are exceptions, like `DashboadController` or `HomeController`, for example.
