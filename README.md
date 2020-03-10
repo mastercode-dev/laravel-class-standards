@@ -39,7 +39,7 @@ Let's use the example of an e-commerce:
 
 In this case, the ideal is to create two _controllers_ with the same name, but in different _namespaces_: `.../Controllers/Manager/ProductsController` and `.../Controllers/Client/ProductsController`.
 
-To add the _namespace_ to the _controller_ creation command: `php artisan make: controller Namespace/NameController`.
+To add the _namespace_ to the _controller_ creation command: `php artisan make:controller Namespace/NameController`.
 
 **Class**
 
