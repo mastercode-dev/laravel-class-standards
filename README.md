@@ -5,6 +5,7 @@
  - [Introduction](#Introduction)
  - [Models](#Models)
  - [Controllers](#Controllers)
+ - [Form Requests](#Form Requests)
 
 ## Introduction
 
@@ -64,4 +65,4 @@ Let's suppose that we need to validate the `store` method located in `App\Http\C
 
 For this, we will create an `App\Http\Requests\Admin\Products\StoreRequest`;
 
-The command to create this Request: `php artisan make: request Admin/Products/StoreRequest`.
+The command to create this Request is: `php artisan make: request Admin/Products/StoreRequest`.
