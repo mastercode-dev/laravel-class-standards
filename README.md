@@ -5,7 +5,7 @@
  - [Introduction](#Introduction)
  - [Models](#Models)
  - [Controllers](#Controllers)
- - [Form Requests](#Form Requests)
+ - [Form Requests](#Form-Requests)
 
 ## Introduction
 
