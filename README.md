@@ -51,3 +51,17 @@ Anyway this will depend on the preference of the developer or the team.
 The biggest issue here is that a _controller_ (almost) always references a _model_, whether singular or plural. So, if you have a `Product` _model_ create a `ProductController` or `ProductsController` to manipulate that _model_.
 
 Of course there are exceptions, like `DashboadController` or `HomeController`, for example.
+
+## Form Requests
+
+As the application code grows, one of the important precautions is to keep the _form request_ classes well organized.
+
+To do this the suggestion is quite simple, just follow the path of the _controllers_.
+
+As well?
+
+Let's suppose that we need to validate the `store` method located in `App\Http\Controllers\Admin\ProductsController`;
+
+For this, we will create an `App\Http\Requests\Admin\Products\StoreRequest`;
+
+The command to create this Request: `php artisan make: request Admin/Products/StoreRequest`.
