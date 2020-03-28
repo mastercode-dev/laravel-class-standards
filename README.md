@@ -6,6 +6,7 @@
  - [Models](#Models)
  - [Controllers](#Controllers)
  - [Form Requests](#Form-Requests)
+ - [Jobs](#Jobs)
 
 ## Introduction
 
@@ -66,3 +67,18 @@ Let's suppose that we need to validate the `store` method located in `App\Http\C
 For this, we will create an `App\Http\Requests\Admin\Products\StoreRequest`;
 
 The command to create this Request is: `php artisan make: request Admin/Products/StoreRequest`.
+
+## Jobs
+
+The recommendation for organizing _jobs_ comes down to two tips:
+
+ - Use the entity (_model_) to be manipulated as the namespace;
+ - Name the Job in a way that represents an action;
+
+Examples: `Product/RemoveExpiredProducts` or `User/GenerateThumbnail`.
+
+Command: `php artisan make:job Product/RemoveExpiredProducts`.
+
+P.S. 1: If the _job_ does not meet this standard, it is likely that it should not be a _job_. But there are always exceptions.
+
+P.S. 2: If you are going to use _jobs_ in a queue, do not receive objects by parameter in the constructor, pass the ID and search for the record in the bank during the execution of the _job_.
