@@ -79,7 +79,7 @@ Example: `Product` or `ProductResource`.
 
 Command: `php artisan make:resource Product`.
 
-P.S .: Relationships can be part of a _default resource_ as long as using the [`when`](https://laravel.com/docs/eloquent-resources#conditional-attributes) method.
+P.S.: Relationships can be part of a _default resource_ as long as using the [`when`](https://laravel.com/docs/eloquent-resources#conditional-attributes) method.
 
 **Custom Resource**
 
