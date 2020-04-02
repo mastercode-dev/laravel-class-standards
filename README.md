@@ -6,6 +6,7 @@
  - [Models](#Models)
  - [Controllers](#Controllers)
  - [Form Requests](#Form-Requests)
+ - [Resources](#Resources)
  - [Jobs](#Jobs)
 
 ## Introduction
@@ -67,6 +68,26 @@ Let's suppose that we need to validate the `store` method located in `App\Http\C
 For this, we will create an `App\Http\Requests\Admin\Products\StoreRequest`;
 
 The command to create this Request is: `php artisan make: request Admin/Products/StoreRequest`.
+
+## Resources
+
+**Default Resource**
+
+When the resource is a pure representation of a model, just follow the nomenclature in the simplest way.
+
+Example: `Product` or `ProductResource`.
+
+Command: `php artisan make:resource Product`.
+
+P.S .: Relationships can be part of a _default resource_ as long as using the [`when`](https://laravel.com/docs/eloquent-resources#conditional-attributes) method.
+
+**Custom Resource**
+
+When it is necessary to load very specific information for a certain system functionality, it is better to use a more specific nomenclature and also a different namespace.
+
+Example: `Custom/ProductDashboard`.
+
+Command: `php artisan make:resource Custom/ProductDashboard`.
 
 ## Jobs
 
