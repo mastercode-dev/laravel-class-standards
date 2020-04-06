@@ -8,6 +8,7 @@
  - [Form Requests](#Form-Requests)
  - [Resources](#Resources)
  - [Jobs](#Jobs)
+ - [Events](#Events)
 
 ## Introduction
 
@@ -103,3 +104,14 @@ Command: `php artisan make:job Product/RemoveExpiredProducts`.
 P.S. 1: If the _job_ does not meet this standard, it is likely that it should not be a _job_. But there are always exceptions.
 
 P.S. 2: If you are going to use _jobs_ in a queue, do not receive objects by parameter in the constructor, pass the ID and search for the record in the bank during the execution of the _job_.
+
+## Events
+
+The recommendation to organize the _events_ comes down to two tips:
+
+1. Use the entity (_model_) to be manipulated as the namespace;
+2. Name the _event_ in a way that represents something that happened;
+
+Example: `User/ResetPasswordRequested`.
+
+Command: `php artisan make:event User/ResetPasswordRequested`.
