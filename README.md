@@ -95,7 +95,7 @@ Command: `php artisan make:resource Custom/ProductDashboard`.
 The recommendation for organizing _jobs_ comes down to two tips:
 
  - Use the entity (_model_) to be manipulated as the namespace;
- - Name the Job in a way that represents an action;
+ - Name the _job_ in a way that represents an action;
 
 Examples: `Product/RemoveExpiredProducts` or `User/GenerateThumbnail`.
 
