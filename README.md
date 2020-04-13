@@ -122,10 +122,10 @@ Command: `php artisan make:event User/ResetPasswordRequested`.
 The recommendation to organize the _listeners_ comes down to two tips:
 
 1. Use the entity (_model_) to be manipulated as the namespace;
-2. Name the _event_ in a way that represents an action to be performed;
+2. Name the _listener_ in a way that represents an action to be performed;
 
 Example: `User/SendResetPasswordNotification` and `Product/StartImageOptimizations`.
 
 Command: `php artisan make:listener User/SendResetPasswordNotification`.
 
-P.S .: In most cases, the entity for the Events and Listeners namespaces is the same.
+P.S.: In most cases, the entity for the Events and Listeners namespaces is the same.
