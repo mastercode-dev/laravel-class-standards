@@ -9,6 +9,7 @@
  - [Resources](#Resources)
  - [Jobs](#Jobs)
  - [Events](#Events)
+ - [Listeners](#Listeners)
 
 ## Introduction
 
@@ -115,3 +116,16 @@ The recommendation to organize the _events_ comes down to two tips:
 Example: `User/ResetPasswordRequested`.
 
 Command: `php artisan make:event User/ResetPasswordRequested`.
+
+## Listeners
+
+The recommendation to organize the _listeners_ comes down to two tips:
+
+1. Use the entity (_model_) to be manipulated as the namespace;
+2. Name the _event_ in a way that represents an action to be performed;
+
+Example: `User/SendResetPasswordNotification` and `Product/StartImageOptimizations`.
+
+Command: `php artisan make:listener User/SendResetPasswordNotification`.
+
+P.S .: In most cases, the entity for the Events and Listeners namespaces is the same.
