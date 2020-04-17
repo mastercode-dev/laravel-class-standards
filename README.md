@@ -10,6 +10,7 @@
  - [Jobs](#Jobs)
  - [Events](#Events)
  - [Listeners](#Listeners)
+ - [Notifications](#Notifications)
 
 ## Introduction
 
@@ -129,3 +130,21 @@ Example: `User/SendResetPasswordNotification` and `Product/StartImageOptimizatio
 Command: `php artisan make:listener User/SendResetPasswordNotification`.
 
 P.S.: In most cases, the entity for the Events and Listeners namespaces is the same.
+
+## Notifications
+
+**Namespace**
+
+Organize _notification_ namespaces based on the types of _users_ that the system has.
+
+Let's assume that there are _users_ of the type `admin` and `client` in the system. Soon, we will have the following namespaces: `App/Notifications/Admin` and `App/Notifications/Client`.
+
+P.S.: If the system has only one type of _user_, there is no reason to worry about it.
+
+**Class**
+
+Name the class based on what you need to notify, as if it were the very brief subject of a message.
+
+Some examples: `App/Notifications/Admin/NewSaleCompleted`, `App/Notifications/Client/EmailConfirmation`.
+
+Command: `php artisan make:notification Admin/NewSaleCompleted`.
