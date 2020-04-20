@@ -11,6 +11,7 @@
  - [Events](#Events)
  - [Listeners](#Listeners)
  - [Notifications](#Notifications)
+ - [Mail](#Mail)
 
 ## Introduction
 
@@ -148,3 +149,23 @@ Name the class based on what you need to notify, as if it were the very brief su
 Some examples: `App/Notifications/Admin/NewSaleCompleted`, `App/Notifications/Client/EmailConfirmation`.
 
 Command: `php artisan make:notification Admin/NewSaleCompleted`.
+
+## Mail
+
+Basically, the instructions are the same as for _notifications_.
+
+**Namespace**
+
+Organize _Mail_ namespaces based on the types of _users_ that the system has.
+
+Let's assume that there are _users_ of the type `admin` and `client` in the system. Soon, we will have the following namespaces: `App/Mail/Admin` and `App/Mail/Client`.
+
+P.S.: If the system has only one type of _user_, there is no reason to worry about it.
+
+**Class**
+
+Name the class by summarizing the subject of the email.
+
+Some examples: `App/Mail/Admin/NewSaleCompleted`, `App/Mail/Client/EmailConfirmation`.
+
+Command: `php artisan make: mail Admin/NewSaleCompleted`.
