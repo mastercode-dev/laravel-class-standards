@@ -3,14 +3,14 @@
 ## Summary
 
  - [Introduction](#Introduction)
- - [Models](#Models)
- - [Controllers](#Controllers)
- - [Form Requests](#Form-Requests)
- - [Resources](#Resources)
- - [Jobs](#Jobs)
- - [Events](#Events)
- - [Listeners](#Listeners)
- - [Notifications](#Notifications)
+ - [Model](#Model)
+ - [Controller](#Controller)
+ - [Form Request](#Form-Request)
+ - [Resource](#Resource)
+ - [Job](#Job)
+ - [Event](#Event)
+ - [Listener](#Listener)
+ - [Notification](#Notification)
  - [Mail](#Mail)
 
 ## Introduction
@@ -21,7 +21,7 @@ With that in mind, this package was built to share a line of thought and help be
 
 Initially only the written tips will be made and, later, the package will also validate your project.
 
-## Models
+## Model
 
 By default, _Laravel_ creates the _Models_ directly in the `app` folder. Or in the `App` namespace, if you prefer.  
 Example: `php artisan make:model Product`.
@@ -34,7 +34,7 @@ There is no right or wrong in this case. It is up to the developer to organize a
 
 To name the file, always use singular words. Ever! Examples: `Product`, `Category`, `CategoryProduct` and so on.
 
-## Controllers
+## Controller
 
 **Namespace**
 
@@ -59,7 +59,7 @@ The biggest issue here is that a _controller_ (almost) always references a _mode
 
 Of course there are exceptions, like `DashboadController` or `HomeController`, for example.
 
-## Form Requests
+## Form Request
 
 As the application code grows, one of the important precautions is to keep the _form request_ classes well organized.
 
@@ -73,7 +73,7 @@ For this, we will create an `App\Http\Requests\Admin\Products\StoreRequest`;
 
 The command to create this Request is: `php artisan make: request Admin/Products/StoreRequest`.
 
-## Resources
+## Resource
 
 **Default Resource**
 
@@ -93,7 +93,7 @@ Example: `Custom/ProductDashboard`.
 
 Command: `php artisan make:resource Custom/ProductDashboard`.
 
-## Jobs
+## Job
 
 The recommendation for organizing _jobs_ comes down to two tips:
 
@@ -108,7 +108,7 @@ P.S. 1: If the _job_ does not meet this standard, it is likely that it should no
 
 P.S. 2: If you are going to use _jobs_ in a queue, do not receive objects by parameter in the constructor, pass the ID and search for the record in the bank during the execution of the _job_.
 
-## Events
+## Event
 
 The recommendation to organize the _events_ comes down to two tips:
 
@@ -119,7 +119,7 @@ Example: `User/ResetPasswordRequested`.
 
 Command: `php artisan make:event User/ResetPasswordRequested`.
 
-## Listeners
+## Listener
 
 The recommendation to organize the _listeners_ comes down to two tips:
 
@@ -132,7 +132,7 @@ Command: `php artisan make:listener User/SendResetPasswordNotification`.
 
 P.S.: In most cases, the entity for the Events and Listeners namespaces is the same.
 
-## Notifications
+## Notification
 
 **Namespace**
 
