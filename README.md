@@ -12,6 +12,7 @@
  - [Listener](#Listener)
  - [Notification](#Notification)
  - [Mail](#Mail)
+ - [Custom Validation Rule](#Custom-Validation-Rule)
 
 ## Introduction
 
@@ -169,3 +170,16 @@ Name the class by summarizing the subject of the email.
 Some examples: `App/Mail/Admin/NewSaleCompleted`, `App/Mail/Client/EmailConfirmation`.
 
 Command: `php artisan make: mail Admin/NewSaleCompleted`.
+
+## Custom Validation Rule
+
+The recommendation to organize the _rules_ comes down to two tips:
+
+1. Use the entity (_model_) to be validated as the namespace;
+2. Name the _rule_ in a way that specifically represents what will be validated;
+
+Example: `Product/HasSelectedImages` or `User/NewPasswordRequirements`.
+
+Command: `php artisan make:rule User/ResetPasswordRequested`.
+
+P.S.: If a _rule_ is generic enough to serve different entities, it does not need a namespace.
